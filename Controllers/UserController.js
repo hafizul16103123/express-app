@@ -1,5 +1,4 @@
-const mongoose = require('mongoose')
-const User = require("../Models/user")
+const User = require("../models/user")
 exports.users=(req, res) => {
     User.find({}, function(err, users) {
         var userMap = {};
@@ -25,7 +24,3 @@ exports.register=(req, res) => {
         })
     });
 }
-
-exports.parameter=(req, res) => {
-        res.json(req)
-    }
